@@ -23,12 +23,12 @@ function addTodo() {
     saveAndRender();
 }
 
-function deleteTodo(id) {
+function deleteList(id) {
     todos = todos.filter(todo => todo.id !== id);
     saveAndRender();
 }
 
-function toggleTodo(id) {
+function toggle(id) {
     todos = todos.map(todo => {
         if (todo.id === id) {
             return { ...todo, completed: !todo.completed };
@@ -38,7 +38,7 @@ function toggleTodo(id) {
     saveAndRender();
 }
 
-function clearCompleted() {
+function clear() {
     todos = todos.filter(todo => !todo.completed);
     saveAndRender();
 }
